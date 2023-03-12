@@ -12,12 +12,12 @@
                 <p>Dashboard</p>
             </a>
         </li>
-        <li class="{{ Request::is('user')?'active':''}}">
+        {{-- <li class="{{ Request::is('user')?'active':''}}">
             <a href="/user">
                 <i class="ti-user"></i>
                 <p>User Profile</p>
             </a>
-        </li>
+        </li> --}}
         {{-- <li class="{{ Request::is('table')?'active':''}}">
             <a href="/table">
                 <i class="ti-view-list-alt"></i>
@@ -30,48 +30,45 @@
                 <p>job list</p>
             </a>
         </li>
-        {{-- <li class="{{ Request::is('typograph')?'active':''}}">
-            <a href="typograph">
-                <i class="ti-text"></i>
-                <p>Typography</p>
+        <li class="{{ Request::is('employees')?'active':''}}">
+            <a href="employees">
+                <i class="fa fa-user-tie"></i>
+                <p>Employees</p>
             </a>
-        </li> --}}
+        </li>
         <li class="{{ Request::is('job-title')?'active':'' }}">
             <a href="/depart_title">
                 <i class="fas fa-list"></i>
                 <p>depart</p>
             </a>
         </li>
-        <li class="{{ Request::is('icon')?'active':''}}">
+
+        {{-- <li class="{{ Request::is('icon')?'active':''}}">
             <a href="icon">
                 <i class="ti-pencil-alt2"></i>
                 <p>Icons</p>
             </a>
-        </li>
-        <li class="{{ Request::is('map')?'active':''}}">
+        </li> --}}
+        {{-- <li class="{{ Request::is('map')?'active':''}}">
             <a href="map">
                 <i class="ti-map"></i>
                 <p>Maps</p>
             </a>
-        </li>
-        <li class="{{ Request::is('user')?'active':''}}">
+        </li> --}}
+        {{-- <li class="{{ Request::is('user')?'active':''}}">
             <a href="notification">
                 <i class="ti-bell"></i>
                 <p>Notifications</p>
             </a>
-        </li>
-        <li class="{{ Request::is('upgrade')?'active':''}} ">
+        </li> --}}
+        {{-- <li class="{{ Request::is('upgrade')?'active':''}} ">
             <a href="upgrade">
                 <i class="ti-export"></i>
                 <p>Upgrade to PRO</p>
             </a>
-        </li>
-        li class="{{ Request::is('attendance')?'active':''}}">
-            <a href="attendance">
-                <i class="fa fa-clipboard-user"></i>
-                <p>Attendance</p>
-            </a>
-        </li>
+        </li> --}}
+
+
     </ul>
 </div>
 </div>

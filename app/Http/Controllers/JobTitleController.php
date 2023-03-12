@@ -1,18 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\jobtitle;
+use App\Models\job_titles;
 use Illuminate\Http\Request;
 
 class JobTitleController extends Controller
 {
     function getJobTitle(){
-        return view ('job_title');
+        return view ('job_title',[
+            'job'=>job_titles::all()
+        ]);
     }
     function saveJobTitle(Request $request){
 
-        jobtitle::create($request->all());
+        job_titles::create($request->all());
 
         return redirect('/');
 }
 }
+ 

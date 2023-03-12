@@ -90,7 +90,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>Job Title</p>
-                                 7
+                                    {{ number_format($job) }}
                                 </div>
                             </div>
                         </div>

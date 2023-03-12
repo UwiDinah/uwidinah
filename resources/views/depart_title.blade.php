@@ -19,7 +19,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>
-                                            <input id="title" type="text" class="form-control border-input" name="depart">
+                                            <input id="title" type="text" class="form-control border-input" name="department_name">
                                         </div>
                                     </div>
                                 </div>
@@ -88,4 +88,3 @@
         </div>
     </div>
 @endsection
-    

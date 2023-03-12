@@ -41,10 +41,10 @@
                     </div>
                 </div>
 
-                 {{-- <div class="col-lg-8 col-md-8">
+                <div class="col-lg-8 col-md-8">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Department Lists</h4>
+                            <h4 class="title">job Lists</h4>
                         </div>
                         <div class="content table-responsive table-full-width">
                             <table class="table table-striped">
@@ -55,7 +55,7 @@
                                     <th>options</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($depart as $key=> $job_title)
+                                    @foreach ($job as $key=> $job_title)
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td> {{ $job_title->job_title_name }} </td>
