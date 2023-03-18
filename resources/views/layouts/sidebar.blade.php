@@ -42,6 +42,12 @@
                 <p>depart</p>
             </a>
         </li>
+        <li class="{{ Request::is('attendance')?'active':'' }}">
+            <a href="/attendance">
+                <i class="fas fa-list"></i>
+                <p>attendance</p>
+            </a>
+        </li>
 
         {{-- <li class="{{ Request::is('icon')?'active':''}}">
             <a href="icon">

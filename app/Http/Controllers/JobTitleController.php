@@ -11,11 +11,37 @@ class JobTitleController extends Controller
             'job'=>job_titles::all()
         ]);
     }
+
     function saveJobTitle(Request $request){
 
-        job_titles::create($request->all());
+        job_titles::create([
+            'job_title_name'=>$request->job,
+            'description'=>$request->description,
+        ]);
 
         return redirect('/');
+    }
+
+    function deleteJobTitle($id){
+        job_titles::find($id)->delete();
+        return redirect()->back();
+    }
+
+    function editJob($id){
+        return view('job_edit',[
+                    'availableJobs'=>job_titles::findOrFail($id),
+                    ]);
+    }
+
+ function updateJob(Request $request , $id){
+    $JobTitleToEdit = job_titles::findOrFail($id);
+    $JobTitleToEdit->update([
+        'job_title_name'=>$request->job,
+        'description'=>$request->description,
+    ]);
+
+    return redirect('/job_title');
+
+
+ }
 }
-}
- 

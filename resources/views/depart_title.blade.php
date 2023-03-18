@@ -19,7 +19,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>
-                                            <input id="title" type="text" class="form-control border-input" name="department_name">
+                                            <input id="title" type="text" class="form-control border-input" name="department_name" required>
                                         </div>
                                     </div>
                                 </div>
@@ -28,7 +28,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="description">Description</label>
-                                            <textarea id="description" rows="5" class="form-control border-input" name="description"></textarea>
+                                            <textarea id="description" rows="5" class="form-control border-input" name="description" required ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -55,14 +55,14 @@
                                     <th>options</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($depart as $key=> $job_title)
+                                    @foreach ($depart as $key=> $department)
                                         <tr>
                                             <td>{{$key+1}}</td>
-                                            <td> {{ $job_title->job_title_name }} </td>
-                                            <td> {{ $job_title->description }} </td>
+                                            <td> {{ $department->department_name }} </td>
+                                            <td> {{ $department->description }} </td>
                                             <td>
-                                                <a href="" style="color:blue">edit</a> |
-                                                <a href="" style="color:red">Delete</a>
+                                                <a href="depart/edit/{{$department->id}}" style="color:blue">edit</a> |
+                                                <a href="/depart/delete/{{$department->id }}" style="color:red">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

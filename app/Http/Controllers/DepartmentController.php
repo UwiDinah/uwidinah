@@ -19,4 +19,24 @@ class DepartmentController extends Controller
 
         return redirect('/');
 }
+
+function deleteDepart($id){
+   Department::find($id)->delete();
+    return redirect()->back();
+}
+
+function editDepart($id){
+    return view('edit_department',[
+        'department'=>Department::findOrFail($id)
+    ]);
+}
+
+function updateDepart(Request $request, $id){
+    $depart=Department::findOrFail($id);
+    $depart->update([
+    'department_name'=>$request->department,
+    'description'=>$request->description
+    ]);
+    return redirect('/depart_title');
+}
 }

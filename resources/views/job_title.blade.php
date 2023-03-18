@@ -19,7 +19,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>
-                                            <input id="title" type="text" class="form-control border-input" name="job">
+                                            <input id="title" type="text" class="form-control border-input" name="job" required>
                                         </div>
                                     </div>
                                 </div>
@@ -61,8 +61,8 @@
                                             <td> {{ $job_title->job_title_name }} </td>
                                             <td> {{ $job_title->description }} </td>
                                             <td>
-                                                <a href="" style="color:blue">edit</a> |
-                                                <a href="" style="color:red">Delete</a>
+                                                <a href="/job_title/edit/{{  $job_title->id}}" style="color:blue">edit</a> |
+                                                <a href="/job_title/delete/{{$job_title->id}}" style="color:red">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
